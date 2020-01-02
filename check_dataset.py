@@ -16,9 +16,9 @@ if __name__ == "__main__":
     # Get dataloader
     dataset = KittiYOLODataset(
         cnf.root_dir,
-        split='valid',
+        split='train_00',
         mode='TRAIN',
-        folder='training',
+        folder='00',
         data_aug=True,
     )
 
