@@ -1,0 +1,8 @@
+# categories.yaml file
+
+
+  "car"   : 0
+  "trunk" : 1
+  "pole"  : 2
+  #- "other-object"
+  
