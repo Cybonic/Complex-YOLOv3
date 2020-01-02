@@ -14,7 +14,6 @@ from torch.utils.data import DataLoader
 from torch.autograd import Variable
 import torch.optim as optim
 
-tf.compat.v1.disable_eager_execution()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -51,7 +50,7 @@ if __name__ == "__main__":
         cnf.root_dir,
         split='train',
         mode='TRAIN',
-        folder='training',
+        folder='00',
         data_aug=True,
         multiscale=opt.multiscale_training
     )

@@ -52,7 +52,8 @@ class KittiDataset(torch_data.Dataset):
         return kitti_utils.Calibration(calib_file)
 
     def get_label(self, idx):
-        label_file = os.path.join(self.label_path, '%06d.txt' % idx)
+        #label_file = os.path.join(self.label_path, '%06d.txt' % idx)
+        label_file = os.path.join(self.label_path, '%d.txt' % idx)
         assert os.path.exists(label_file)
         return kitti_utils.read_label(label_file)
 
