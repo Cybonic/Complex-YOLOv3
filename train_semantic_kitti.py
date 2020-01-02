@@ -18,7 +18,7 @@ import torch.optim as optim
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--epochs", type=int, default=300, help="number of epochs")
-    parser.add_argument("--batch_size", type=int, default=4, help="size of each image batch")
+    parser.add_argument("--batch_size", type=int, default=2, help="size of each image batch")
     parser.add_argument("--gradient_accumulations", type=int, default=2, help="number of gradient accums before step")
     parser.add_argument("--model_def", type=str, default="config/complex_yolov3.cfg", help="path to model definition file")
     parser.add_argument("--pretrained_weights", type=str, help="if specified starts from checkpoint model")
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     print(opt)
 
     logger = Logger("logs")
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "gpu")
     os.makedirs("checkpoints", exist_ok=True)
     class_names = load_classes("data/classes.names")
 
