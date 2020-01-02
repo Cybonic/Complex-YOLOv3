@@ -55,6 +55,8 @@ if __name__ == "__main__":
         multiscale=opt.multiscale_training
     )
 
+    #img_file, img, targets = dataset.__getitem__(0)
+
     dataloader = DataLoader(
         dataset,
         opt.batch_size,

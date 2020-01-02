@@ -39,12 +39,11 @@ class Object3d(object):
     def cls_type_to_id(self, cls_type):
         # Car and Van ==> Car class
         # Pedestrian and Person_Sitting ==> Pedestrian Class
+     
         CLASS_NAME_TO_ID = {
-            'Car': 				0,
-            'Pedestrian': 		1,
-            'Cyclist': 			2,
-            'Van': 				0,
-            'Person_sitting': 	1
+            'car': 				0,
+            'trunk ': 		    1,
+            'pole ': 			2,
         }
         if cls_type not in CLASS_NAME_TO_ID.keys():
             return -1

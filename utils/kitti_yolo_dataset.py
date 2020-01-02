@@ -98,7 +98,7 @@ class KittiYOLODataset(KittiDataset):
 
             b = bev_utils.removePoints(lidarData, cnf.boundary)
             rgb_map = bev_utils.makeBVFeature(b, cnf.DISCRETIZATION, cnf.boundary)
-            target = bev_utils.build_yolo_target(labels)
+            target = bev_utils.build_yolo_target(labels[0:50])
             img_file = os.path.join(self.image_path, '%06d.png' % sample_id)
 
             ntargets = 0
