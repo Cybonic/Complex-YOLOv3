@@ -18,8 +18,9 @@ def evaluate(model, iou_thres, conf_thres, nms_thres, img_size, batch_size):
     model.eval()
 
     # Get dataloader
-    split='valid'
-    dataset = KittiYOLODataset(cnf.root_dir, split=split, mode='EVAL', folder='training', data_aug=False)
+    
+    split='valid_00'
+    dataset = KittiYOLODataset(cnf.root_dir, split=split, mode='EVAL', folder='00', data_aug=False)
     dataloader = torch.utils.data.DataLoader(
         dataset, batch_size=batch_size, shuffle=False, num_workers=1, collate_fn=dataset.collate_fn
     )
