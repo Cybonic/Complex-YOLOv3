@@ -3,14 +3,12 @@ import numpy as np
 
 root_dir = 'data'
 
-class_list = ["Car", "Pedestrian", "Cyclist"]
+class_list = ["car", "trunk", "pole"]
 
 CLASS_NAME_TO_ID = {
-	'Car': 				0,
-	'Pedestrian': 		1,
-	'Cyclist': 			2,
-	'Van': 				0,
-	'Person_sitting': 	1,
+	'car': 				0,
+	'trunk': 			1,
+	'pole': 			2,
 }
 
 # Front side (of vehicle) Point Cloud boundary for BEV
