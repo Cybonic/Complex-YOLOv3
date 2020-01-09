@@ -42,8 +42,8 @@ class Object3d(object):
      
         CLASS_NAME_TO_ID = {
             'car': 				0,
-            'trunk ': 		    1,
-            'pole ': 			2,
+            'trunk': 		    1,
+            'pole': 			2,
         }
         if cls_type not in CLASS_NAME_TO_ID.keys():
             return -1
