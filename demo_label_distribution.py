@@ -73,6 +73,6 @@ if __name__ == "__main__":
 
     class_names = load_classes(opt.class_path)
 
-    split='valid_00'
+    split='train_00'
     folder = '00'
     label_distribution(split,folder)
