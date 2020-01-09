@@ -86,9 +86,9 @@ def predictions_to_kitti_format(img_detections, calib, img_shape_2d, img_size, R
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_def", type=str, default="config/complex_tiny_yolov3.cfg", help="path to model definition file")
-    parser.add_argument("--weights_path", type=str, default="checkpoints/tiny-yolov3_ckpt_epoch-220.pth", help="path to weights file")
-    parser.add_argument("--class_path", type=str, default="data/classes.names", help="path to class label file")
+    parser.add_argument("--model_def", type=str, default="config/complex_yolov3.cfg", help="path to model definition file")
+    parser.add_argument("--weights_path", type=str, default="checkpoints/yolov3_ckpt_epoch-298.pth", help="path to weights file")
+    parser.add_argument("--class_path", type=str, default="data/classesOrigin.names", help="path to class label file")
     parser.add_argument("--conf_thres", type=float, default=0.5, help="object confidence threshold")
     parser.add_argument("--nms_thres", type=float, default=0.5, help="iou thresshold for non-maximum suppression")
     parser.add_argument("--img_size", type=int, default=cnf.BEV_WIDTH, help="size of each image dimension")
